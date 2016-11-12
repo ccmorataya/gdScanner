@@ -147,5 +147,7 @@ func _input(event):
 		text += "?"
 	elif (event.is_action_pressed("charSpace") && !event.is_echo()):
 		text += " "
+	elif (event.is_action_pressed("charDel") && !event.is_echo()):
+		text.erase( (text.length()-1) ,1)
 	
 	labelText.set_text(str(text))
