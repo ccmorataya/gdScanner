@@ -132,5 +132,20 @@ func _input(event):
 		text += ":"
 	elif (event.is_action_pressed("charDQ") && !event.is_echo()):
 		text += "\""
+	#here
+	elif (event.is_action_pressed("char,") && !event.is_echo()):
+		text += ","
+	elif (event.is_action_pressed("char.") && !event.is_echo()):
+		text += "."
+	elif (event.is_action_pressed("charSlash") && !event.is_echo()):
+		text += "/"
+	elif (event.is_action_pressed("char<") && !event.is_echo()):
+		text += "<"
+	elif (event.is_action_pressed("char>") && !event.is_echo()):
+		text += ">"
+	elif (event.is_action_pressed("char?") && !event.is_echo()):
+		text += "?"
+	elif (event.is_action_pressed("charSpace") && !event.is_echo()):
+		text += " "
 	
 	labelText.set_text(str(text))
