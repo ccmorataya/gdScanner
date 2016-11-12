@@ -104,5 +104,14 @@ func _input(event):
 		text += "`"
 	elif (event.is_action_pressed("char~") && !event.is_echo()):
 		text += "~"
+	elif (event.is_action_pressed("char-") && !event.is_echo()):
+		text += "-"
+	elif (event.is_action_pressed("char_") && !event.is_echo()):
+		text += "_"
+	# the equals symbol isn't working
+	elif (event.is_action_pressed("char=") && !event.is_echo()):
+		text += "="
+	elif (event.is_action_pressed("char+") && !event.is_echo()):
+		text += "+"
 	
 	labelText.set_text(text)
