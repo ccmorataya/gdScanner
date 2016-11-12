@@ -60,5 +60,25 @@ func _input(event):
 		text += "Y"
 	elif (event.is_action_pressed("charZ") && !event.is_echo()):
 		text += "Z"
+	elif (event.is_action_pressed("char1") && !event.is_echo()):
+		text += "1"
+	elif (event.is_action_pressed("char2") && !event.is_echo()):
+		text += "2"
+	elif (event.is_action_pressed("char3") && !event.is_echo()):
+		text += "3"
+	elif (event.is_action_pressed("char4") && !event.is_echo()):
+		text += "4"
+	elif (event.is_action_pressed("char5") && !event.is_echo()):
+		text += "5"
+	elif (event.is_action_pressed("char6") && !event.is_echo()):
+		text += "6"
+	elif (event.is_action_pressed("char7") && !event.is_echo()):
+		text += "7"
+	elif (event.is_action_pressed("char8") && !event.is_echo()):
+		text += "8"
+	elif (event.is_action_pressed("char9") && !event.is_echo()):
+		text += "9"
+	elif (event.is_action_pressed("char0") && !event.is_echo()):
+		text += "0"
 	
 	labelText.set_text(text)
