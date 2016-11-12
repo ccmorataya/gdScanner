@@ -11,5 +11,7 @@ func _input(event):
 		text += "A"
 	elif (event.is_action_pressed("charB") && !event.is_echo()):
 		text += "B"
+	elif (event.is_action_pressed("charC") && !event.is_echo()):
+		text += "C"
 	
 	labelText.set_text(text)
