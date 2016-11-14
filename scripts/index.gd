@@ -165,5 +165,4 @@ func _on_btn_scann_pressed():
 	labelOutput.set_text("")
 	var split = output.split("\n")
 	output = ""
-	print(split[1])
-	print(dict)
+	print(split)
