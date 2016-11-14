@@ -8,7 +8,7 @@ func _ready():
 
 # Handling the keyboard presed keys
 func _input(event):
-	var labelText = get_node("text")
+	var labelText = get_node("cnt_input/lbl_text")
 	if (!isProcessed):
 		if (event.is_action_pressed("charA") && !event.is_echo()):
 			text += "a"
