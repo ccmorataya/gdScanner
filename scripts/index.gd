@@ -3,7 +3,6 @@ extends Node2D
 var text = ""
 var output = ""
 var isProcessed = false
-var dict = {}
 onready var labelText = get_node("cnt_input/lbl_text")
 onready var labelOutput = get_node("cnt_transitions/lbl_output")
 
@@ -165,7 +164,6 @@ func _input(event):
 func _on_btn_scann_pressed():
 	labelOutput.set_text("")
 	var split = output.split("\n")
-	#dict.parse_json(output.json_escape())
 	output = ""
 	print(split[1])
 	print(dict)
