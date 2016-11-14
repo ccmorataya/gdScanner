@@ -1,14 +1,16 @@
 extends Node2D
 
 var text = ""
+var output = ""
 var isProcessed = false
+onready var labelText = get_node("cnt_input/lbl_text")
+onready var labelOutput = get_node("cnt_transitions/lbl_output")
 
 func _ready():
 	set_process_input(true)
 
 # Handling the keyboard presed keys
 func _input(event):
-	var labelText = get_node("cnt_input/lbl_text")
 	if (!isProcessed):
 		if (event.is_action_pressed("charA") && !event.is_echo()):
 			text += "a"
@@ -151,8 +153,14 @@ func _input(event):
 		elif (event.is_action_pressed("charDel") && !event.is_echo()):
 			text.erase( (text.length()-1) ,1)
 		elif (event.is_action_pressed("enter") && !event.is_echo()):
+			output += text + "\n"
+			labelOutput.set_text(output)
 			text = ""
 			isProcessed = true
 	else:
 		isProcessed = false
 	labelText.set_text(str(text))
+
+func _on_btn_scann_pressed():
+	labelOutput.set_text("")
+	print(output)
