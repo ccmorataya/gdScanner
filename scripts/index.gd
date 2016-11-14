@@ -3,10 +3,12 @@ extends Node2D
 var text = ""
 var output = ""
 var isProcessed = false
+var currentScene = null
 onready var labelText = get_node("cnt_input/lbl_text")
 onready var labelOutput = get_node("cnt_transitions/lbl_output")
 
 func _ready():
+	currentScene = self
 	set_process_input(true)
 
 # Handling the keyboard presed keys
@@ -163,6 +165,19 @@ func _input(event):
 
 func _on_btn_scann_pressed():
 	labelOutput.set_text("")
-	var split = output.split("\n")
+	#var split = output.split("\n")
+	Globals.set("split", output.split("\n"))
 	output = ""
-	print(split)
+	setScene("res://scenes/result.tscn")
+	print(Globals.get("split"))
+
+# create a function to switch between scenes 
+func setScene(scene):
+	#clean up the current scene
+	currentScene.queue_free()
+	#load the file passed in as the param "scene"
+	var s = ResourceLoader.load(scene)
+	#create an instance of our scene
+	currentScene = s.instance()
+	# add scene to root
+	get_tree().get_root().add_child(currentScene)
