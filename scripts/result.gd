@@ -6,6 +6,6 @@ extends Node2D
 # var b="textvar"
 
 func _ready():
-	var labelInput = get_node("lbl_input")
+	var labelInput = get_node("lbl_AFD")
 	var split = Globals.get("split")
 	labelInput.set_text(split[0])
