@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scripts/index.gd" type="Script" id=1]
-[ext_resource path="res://fonts/arial-bolditalicmt-opentype.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/arial.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/delta.png" type="Texture" id=3]
 [ext_resource path="res://sprites/border_box.png" type="Texture" id=4]
 
