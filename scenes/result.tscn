@@ -15,9 +15,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 424.0
+margin/left = 243.0
 margin/top = 9.0
-margin/right = 489.0
+margin/right = 308.0
 margin/bottom = 23.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "gdScanner"
@@ -80,9 +80,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 0.0
+margin/top = -5.0
 margin/right = 40.0
-margin/bottom = 40.0
+margin/bottom = 35.0
 
 [node name="lbl_tableTitle" type="Label" parent="cnt_table"]
 
@@ -203,5 +203,21 @@ transform/scale = Vector2( 9, 6 )
 [node name="spr_box1" type="Sprite" parent="nd_graph"]
 
 texture = ExtResource( 3 )
+
+[node name="btn_afnd" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 634.0
+margin/top = 22.0
+margin/right = 744.0
+margin/bottom = 42.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Validate strings"
+flat = false
 
 
