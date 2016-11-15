@@ -172,6 +172,7 @@ margin/bottom = 40.0
 
 [node name="lbl_tableRowState" type="Label" parent="cnt_table/cnt_statesInstance"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -197,6 +198,7 @@ centered = false
 
 [node name="lbl_tableRowSymbol" type="Label" parent="cnt_table/cnt_statesInstance"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -222,6 +224,7 @@ centered = false
 
 [node name="lbl_tableRowSymbol2" type="Label" parent="cnt_table/cnt_statesInstance"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
