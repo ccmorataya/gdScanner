@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://scripts/index.gd" type="Script" id=1]
 [ext_resource path="res://fonts/arial.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,34 @@
 [sub_resource type="DynamicFont" id=1]
 
 font/size = 50
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 24
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 16
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 2 )
@@ -60,6 +88,7 @@ margin/left = 124.0
 margin/top = 120.0
 margin/right = 424.0
 margin/bottom = 220.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Sample Text"
 percent_visible = 1.0
@@ -83,8 +112,9 @@ margin/left = 122.0
 margin/top = 218.0
 margin/right = 360.0
 margin/bottom = 232.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "\"Press enter to accept the transition\""
+text = "\"Press shift + enter to accept the transition\""
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -118,7 +148,6 @@ margin/bottom = 76.0
 
 [node name="lbl_transitionsSubtitle" type="Label" parent="cnt_transitions"]
 
-rect/scale = Vector2( 1.5, 1.5 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -127,6 +156,7 @@ margin/left = 764.0
 margin/top = 65.0
 margin/right = 834.0
 margin/bottom = 79.0
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Transitions"
 percent_visible = 1.0
@@ -143,6 +173,7 @@ margin/left = 683.0
 margin/top = 113.0
 margin/right = 970.0
 margin/bottom = 383.0
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
 lines_skipped = 0
