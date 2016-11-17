@@ -10,12 +10,6 @@ func _ready():
 	var symbolA = get_node("cnt_table/cnt_statesInstance/lbl_tableRowSymbol")
 	var symbolB = get_node("cnt_table/cnt_statesInstance/lbl_tableRowSymbol2")
 	var containerRow = get_node("cnt_table/cnt_statesInstance")
-	var duplicate = containerRow.duplicate()
-	var basePosition = containerRow.get_pos()
-	basePosition.y += 25
-	self.add_child(duplicate)
-	
-	duplicate.set_pos(basePosition)
 	
 	var labelAlpha = get_node("lbl_alphabeth")
 	var split = Globals.get("split")
@@ -41,6 +35,18 @@ func _ready():
 			alphabeth += ", "
 	
 	alphabeth += "}"
+	
+	var count = 0
+	
+	# Instantiate the row node for each state
+	for i in repeatedStates:
+		count = count + 1
+		var duplicate = containerRow.duplicate()
+		var newPosition = containerRow.get_pos()
+		newPosition.y += 25 * count
+		self.add_child(duplicate)
+		duplicate.set_pos(newPosition)
+		duplicate.get_node("lbl_tableRowState").set_text(i)
 	
 	#repeatedSymbols showed in the table labels
 	symbolA.set_text(repeatedSymbols[0])
