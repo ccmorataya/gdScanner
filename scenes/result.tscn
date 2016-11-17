@@ -172,7 +172,6 @@ margin/bottom = 40.0
 
 [node name="lbl_tableRowState" type="Label" parent="cnt_table/cnt_statesInstance"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -183,7 +182,6 @@ margin/right = 118.0
 margin/bottom = 251.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "sta"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -209,7 +207,6 @@ margin/right = 198.0
 margin/bottom = 251.0
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "sym"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -235,7 +232,6 @@ margin/right = 267.0
 margin/bottom = 252.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "sym"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0

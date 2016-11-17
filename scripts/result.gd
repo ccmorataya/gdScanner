@@ -6,11 +6,16 @@ var bool_trigger
 var repeatedSymbols
 
 func _ready():
+	var symbolA = get_node("cnt_table/cnt_statesInstance/lbl_tableRowSymbol")
+	var symbolB = get_node("cnt_table/cnt_statesInstance/lbl_tableRowSymbol2")
 	var containerRow = get_node("cnt_table/cnt_statesInstance")
 	var duplicate = containerRow.duplicate()
+	var basePosition = containerRow.get_pos()
+	basePosition.y += 25
 	self.add_child(duplicate)
-	duplicate.set_owner(self)
-	duplicate.show()
+	
+	duplicate.set_pos(basePosition)
+	
 	var labelAlpha = get_node("lbl_alphabeth")
 	var split = Globals.get("split")
 	split.remove(split.size()-1)
@@ -29,6 +34,11 @@ func _ready():
 			alphabeth += ", "
 	
 	alphabeth += "}"
+	
+	#repeatedSymbols used in the table labels
+	symbolA.set_text(repeatedSymbols[0])
+	symbolB.set_text(repeatedSymbols[1])
+	
 	labelAlpha.set_text(alphabeth)
 
 func alphabethSymbol(alphaText):
@@ -53,3 +63,13 @@ func check_duplicates(a):
 			seen[v] = true
 		returnedA.append(a[i])
 	return returnedA
+
+func afdState(alphaText):
+	var symbol = ""
+	var scann = RegEx.new()
+	scann.compile("; \\d")
+	scann.find(alphaText)
+	var symbols = scann.get_captures()
+	symbols = str(symbols)
+	symbol = symbols.substr(3,1)
+	return symbol
